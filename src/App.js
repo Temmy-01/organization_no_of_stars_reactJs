@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import classes from'./App.module.css';
+import ProductDetails from './ProductDetails/ProductDetails';
+import ProductPreview from './ProductPreview/ProductPreview';
+import Topbar from './Topbar/Topbar';
+import ProductData from './Utils/ProductData';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    ProductData: ProductData,
+    currentPreviewImagePos: 0,
+    currentSelectedFeature: 0,
+  }
+
+  onColorOptionsClick = (pos) => {
+    this.setState({currentPreviewImagePos : pos })
+  }
+
+    onFeatureItemClick = (pos) => {
+      this.setState({currentSelectedFeature: pos})
+    }
+    render() {
+      return (
+        <div className="App">
+           <Topbar />
+    
+          <div className={classes.MainContainer}>
+            <div className={classes.ProductPreview}>
+                <ProductPreview  currentPreviewImage={this.state.ProductData.colorOptions
+                [this.state.currentPreviewImagePos].imageUrl} 
+                currentSelectedFeature={this.state.currentSelectedFeature} />
+            </div>
+    
+            <div className={classes.ProductData}>
+              <ProductDetails  data={this.state.ProductData} onColorOptionsClick={this.onColorOptionsClick}
+              currentPreviewImagePos={this.state.currentPreviewImagePos}
+              onFeatureItemClick = {this.onFeatureItemClick}
+              currentSelectedFeature={this.state.currentSelectedFeature} />
+            </div>
+          </div>
+        </div>
+      );
+    }
 }
 
 export default App;
