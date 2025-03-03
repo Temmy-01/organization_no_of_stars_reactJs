@@ -1,21 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+    data-sidebar-image="none">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <meta name="theme-color" content="#000000" /> -->
+  <meta name="description" content="just food management app" />
+  <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!-- jsvectormap css -->
+  <link href="/assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+
+  <!--Swiper slider css-->
+  <link href="/assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Layout config Js -->
+  <script src="/assets/js/layout.js"></script>
+  <!-- Bootstrap Css -->
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <!-- Icons Css -->
+  <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+  <!-- App Css-->
+  <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css"/>
+  <!-- custom Css-->
+  <link href="/assets/css/custom.min.css" rel="stylesheet" type="text/css"/>
+
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+
+  <!-- Material design icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+
+  <!-- Template Main CSS File -->
+  <link href="/assets/css/style.css" rel="stylesheet">
+
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,14 +52,23 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/35c398e458.js"></script>
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <title>Organisation repo</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+
+    <!--preloader-->
+    <!-- <div id="preloader">
+      <div id="status">
+        <div class="spinner-border text-primary avatar-sm" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -41,5 +78,47 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+
+  <!-- JAVASCRIPT -->
+  <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="/assets/libs/simplebar/simplebar.min.js"></script> -->
+  <script src="/assets/libs/node-waves/waves.min.js"></script>
+  <script src="/assets/libs/feather-icons/feather.min.js"></script>
+  <script src="/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+  <!-- <script src="/assets/js/plugins.js"></script> -->
+
+  <!-- apexcharts -->
+  <script src="/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+  <!-- Vector map-->
+  <script src="/assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+  <script src="/assets/libs/jsvectormap/maps/world-merc.js"></script>
+
+  <!--Swiper slider js-->
+  <script src="/assets/libs/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Dashboard init -->
+  <!-- <script src="/assets/js/pages/dashboard-ecommerce.init.js"></script> -->
+
+  <!-- App js -->
+  <script src="/assets/js/app.js"></script>
+
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+  <!-- particles js -->
+  <script src="/assets/libs/particles.js/particles.js"></script>
+  <!-- particles app js -->
+  <script src="/assets/js/pages/particles.app.js"></script>
+  <!-- password-addon init -->
+  <script src="/assets/js/pages/password-addon.init.js"></script>
+</body>
+
 </html>

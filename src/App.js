@@ -1,47 +1,45 @@
-import React, { Component } from 'react';
-import classes from'./App.module.css';
-import ProductDetails from './ProductDetails/ProductDetails';
-import ProductPreview from './ProductPreview/ProductPreview';
-import Topbar from './Topbar/Topbar';
-import ProductData from './Utils/ProductData';
+// import { BrowserRouter as Router } from 'react-router-dom';
+// // import './App.css';
+// import { ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+// import AppRoutes from './AppRoutes';
 
-class App extends Component {
+// function App() {
+//   return (
+//     <>
+//       <Router>
+//         <div className="App">
+//             <AppRoutes />
+//         </div>
+//       </Router>
+//       <ToastContainer />
+//     </>
+//   );
+// }
 
-  state = {
-    ProductData: ProductData,
-    currentPreviewImagePos: 0,
-    currentSelectedFeature: 0,
-  }
+// export default App;
 
-  onColorOptionsClick = (pos) => {
-    this.setState({currentPreviewImagePos : pos })
-  }
 
-    onFeatureItemClick = (pos) => {
-      this.setState({currentSelectedFeature: pos})
-    }
-    render() {
-      return (
-        <div className="App">
-           <Topbar />
-    
-          <div className={classes.MainContainer}>
-            <div className={classes.ProductPreview}>
-                <ProductPreview  currentPreviewImage={this.state.ProductData.colorOptions
-                [this.state.currentPreviewImagePos].imageUrl} 
-                currentSelectedFeature={this.state.currentSelectedFeature} />
-            </div>
-    
-            <div className={classes.ProductData}>
-              <ProductDetails  data={this.state.ProductData} onColorOptionsClick={this.onColorOptionsClick}
-              currentPreviewImagePos={this.state.currentPreviewImagePos}
-              onFeatureItemClick = {this.onFeatureItemClick}
-              currentSelectedFeature={this.state.currentSelectedFeature} />
-            </div>
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import AppRoutes from './AppRoutes';
+import { PermissionsProvider } from './context/PermissionContext';
+
+function App() {
+  return (
+    <>
+      <Router>
+        <PermissionsProvider>
+          <div className="App">
+            <AppRoutes />
           </div>
-        </div>
-      );
-    }
+        </PermissionsProvider>
+      </Router>
+      <ToastContainer />
+    </>
+  );
 }
 
 export default App;
+

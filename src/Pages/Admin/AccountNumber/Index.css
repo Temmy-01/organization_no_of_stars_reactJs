@@ -1,0 +1,22 @@
+.badge-success-light {
+    background-color: #c8f1d0;
+    color: #4caf50;
+}
+
+.badge {
+    border-radius: .35rem;
+    display: inline-block;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    padding: .25em .4em;
+    text-align: center;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    vertical-align: initial;
+    white-space: nowrap;
+}
+
+.badge-danger {
+    background-color: #ec3237;
+    color: #fff;
+}
