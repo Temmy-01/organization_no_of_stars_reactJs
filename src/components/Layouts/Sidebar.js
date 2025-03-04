@@ -76,7 +76,7 @@ export default function SideBar() {
               </Link>
             </li>
             <li className="menu-title">
-              <span data-key="t-menu">Parameter Management</span>
+              <span data-key="t-menu">Account Management</span>
             </li>
 
             <li
